@@ -1,6 +1,6 @@
 # PROJECT #2 OVERVIEW
 
-##Group: Cheetah (Al, Harsh, Ann, Matt L.)
+## Group: Cheetah (Al, Harsh, Ann, Matt L.)
 
 ## Project name: Cheetah
 
@@ -16,6 +16,6 @@
 ## Technology:
 
 	The app will use HTML, CSS, Javascript, JQuery, Node.JS and Mysql and possibly Handlebars and Sequelize. 
-    
+
 ## New Technology:
 	TBD
