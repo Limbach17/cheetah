@@ -19,7 +19,7 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-require("./routes/apiRoutes")(app);
+// require("./routes/mod-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
