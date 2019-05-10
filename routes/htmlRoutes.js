@@ -6,4 +6,8 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  app.get("/framework", function(req, res) {
+    res.render("frameworks");
+  });
+
 };
