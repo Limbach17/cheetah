@@ -40,14 +40,25 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Example.associate = function(models) {
-        Example.belongsTo(models.Moderator, models.Framework, models.Subject, {
+        Example.belongsTo(models.Subject, {
           foreignKey: {
             allowNull: false
           }
         });
 
-        Example.hasMany(models.TextBlock, models.CodeBlock, models.ImageRef, 
-            models.RefLink, models.Heading,{
+        Example.belongsTo(models.Framework, {
+          foreignKey: {
+            allowNull: false
+          }
+        });
+
+        Example.belongsTo(models.Moderator, {
+          foreignKey: {
+            allowNull: false
+          }
+        });
+
+        Example.hasMany(models.Head,{
         });
     };
     return Example;

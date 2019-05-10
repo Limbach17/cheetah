@@ -37,9 +37,16 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Moderator.associate = function(models) {
-    Moderator.hasMany(models.Framework, models.Subject, models.Example, 
-      models.TextBlock, models.CodeBlock, models.ImageRef, 
-      models.RefLink, models.Head, {
+    Moderator.hasMany(models.Framework,{
+    });
+
+    Moderator.hasMany(models.Subject,{
+    });
+
+    Moderator.hasMany(models.Example,{
+    });
+
+    Moderator.hasMany(models.Head,{
     });
 
   }

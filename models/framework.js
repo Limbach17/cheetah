@@ -46,10 +46,13 @@ module.exports = function(sequelize, DataTypes) {
           foreignKey: {
             allowNull: false
           }
-        })
+        });
 
-        Framework.hasMany(models.Subject, models.Example, {
-        }) 
+        Framework.hasMany(models.Subject,{
+        });
+
+        Framework.hasMany(models.Example,{
+        });
     };
     return Framework;
   };

@@ -27,14 +27,20 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Subject.associate = function(models) {
-        Subject.belongsTo(models.Moderator, models.Framework, {
+        Subject.belongsTo(models.Moderator,{
           foreignKey: {
             allowNull: false
           }
-        })
+        });
+        
+        Subject.belongsTo(models.Framework,{
+          foreignKey: {
+            allowNull: false
+          }
+        });
 
         Subject.hasMany(models.Example, {
-        }) 
+        }); 
     };
     return Subject;
   };
