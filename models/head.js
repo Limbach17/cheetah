@@ -11,7 +11,13 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Head.associate = function(models) {
-        Head.belongsTo(models.Moderator, models.Example, {
+        Head.belongsTo(models.Moderator, {
+          foreignKey: {
+            allowNull: false
+          }
+        });
+
+        Head.belongsTo(models.Example, {
           foreignKey: {
             allowNull: false
           }
