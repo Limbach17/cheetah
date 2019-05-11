@@ -1,5 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
   var Moderator = sequelize.define("Moderator", {
+    route_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isAlphanumeric: true,
+        len: [1,50],
+      }
+    },
+    
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -44,9 +53,6 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Moderator.hasMany(models.Example,{
-    });
-
-    Moderator.hasMany(models.Head,{
     });
 
   }

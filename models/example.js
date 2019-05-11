@@ -1,5 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
     var Example = sequelize.define("Example", {
+      route_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          isAlphanumeric: true,
+          len: [1,50],
+        }
+      },
+      
       example_name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -58,8 +67,6 @@ module.exports = function(sequelize, DataTypes) {
           }
         });
 
-        Example.hasMany(models.Head,{
-        });
     };
     return Example;
   };

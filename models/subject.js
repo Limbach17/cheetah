@@ -1,5 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
     var Subject = sequelize.define("Subject", {
+      route_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          isAlphanumeric: true,
+          len: [1,50],
+        }
+      },
+      
       subject_name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -27,13 +36,13 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Subject.associate = function(models) {
-        Subject.belongsTo(models.Moderator,{
+        Subject.belongsTo(models.Framework,{
           foreignKey: {
             allowNull: false
           }
         });
         
-        Subject.belongsTo(models.Framework,{
+        Subject.belongsTo(models.Moderator,{
           foreignKey: {
             allowNull: false
           }
