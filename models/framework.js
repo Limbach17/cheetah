@@ -1,5 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
     var Framework = sequelize.define("Framework", {
+      route_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          isAlphanumeric: true,
+          len: [1,50],
+        }
+      },
+      
       framework_name: {
         type: DataTypes.STRING,
         allowNull: false,

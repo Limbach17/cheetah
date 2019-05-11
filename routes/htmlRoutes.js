@@ -1,4 +1,5 @@
 var path = require("path");
+var db = require("../models");
 
 module.exports = function(app) {
 
@@ -6,8 +7,19 @@ module.exports = function(app) {
     res.render("index");
   });
 
-  app.get("/framework", function(req, res) {
+  ////MUST WORK ON PARAM TO SELECT FOR ONE SPECIFIC FRAMEWORK////
+  app.get("/frameworks", function(req, res) {
     res.render("frameworks");
   });
+
+  //////////////////////NEED HANDLEBARS BELOW THIS LINE/////////////////////////
+
+  // app.get("/mgmt", function(req, res) {
+  //   res.render("/account-mgmt");
+  // });
+
+  // app.get("/cruddy", function(req, res) {
+  //   res.render("/cruddy");
+  // });
 
 };
