@@ -31,7 +31,7 @@ p {
 }
 /* Animation */
 p {
-  animation: animated-text 4s steps(18,end) 1s 1 normal both,
+  animation: animated-text 4s steps(18,end) 4s 1 normal both,
              animated-cursor 600ms steps(18,end) infinite;
 }
 
