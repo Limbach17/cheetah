@@ -43,7 +43,7 @@ module.exports = function(sequelize, DataTypes) {
 
       icon_url: {
         type: DataTypes.TEXT,
-        allowNull: true,
+        allowNull: false,
         validate: {
             isURL: true,
         }

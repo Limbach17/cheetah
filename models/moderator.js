@@ -1,5 +1,17 @@
+// const Sequelize = require('sequelize');
+// const uuid = require('uuid/v4'); // ES5
+
+// 'use strict';
+
 module.exports = function(sequelize, DataTypes) {
   var Moderator = sequelize.define("Moderator", {
+    // id: {
+    //   allowNull: false,
+    //   primaryKey: true,
+    //   type: Sequelize.UUID,
+    //   defaultValue: () => uuid()
+    // },
+
     route_name: {
       type: DataTypes.STRING,
       allowNull: false,
