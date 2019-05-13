@@ -1,4 +1,5 @@
 var path = require("path");
+var db = require("../models");
 
 module.exports = function(app) {
 
@@ -6,19 +7,24 @@ module.exports = function(app) {
     res.render("index");
   });
 
-  ////MUST WORK ON PARAM TO SELECT FOR ONE SPECIFIC FRAMEWORK////
-  app.get("/frameworks", function(req, res) {
-    res.render("frameworks");
+  app.get("/frameworks/:route_name", function(req, res) {
+    db.Framework.findOne({ where: { route_name: req.params.route_name }}).then(function(dbFrameworks) {
+      res.render("frameworks", {
+        route_name: dbFrameworks
+      });
+    });
   });
 
-  //////////////////////NEED HANDLEBARS BELOW THIS LINE/////////////////////////
+  app.get("/mgmt", function(req, res) {
+    res.render("/account-mgmt");
+  });
 
-  // app.get("/mgmt", function(req, res) {
-  //   res.render("/account-mgmt");
-  // });
+  app.get("/cruddy", function(req, res) {
+    res.render("/cruddy");
+  });
 
-  // app.get("/cruddy", function(req, res) {
-  //   res.render("/cruddy");
-  // });
+  app.get("*", function(req, res) {
+    res.render("404");
+  });
 
 };
