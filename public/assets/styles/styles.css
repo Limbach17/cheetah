@@ -81,4 +81,43 @@ p{
     font-weight: 800px;
   }
 
+  .cheetah {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
 
+.htmlhead {
+  margin-top: 30px;
+  background-color: lightyellow;
+  max-width: 100%;
+  text-align: left;
+}
+.html {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33%;
+  padding: 30px;
+  height: 500px; /* Should be removed. Only for demonstration */
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.topics {
+  font-family: 'Times New Roman', Times, serif
+}
