@@ -23,14 +23,14 @@ body{
   from { width: 0 }
   to { width: 100% }
 }
-p {
+h5 {
   white-space: nowrap;
   overflow: hidden;    
   font-family: 'Source Code Pro', monospace;  
   margin: 0 auto;
 }
 /* Animation */
-p {
+h5 {
   animation: animated-text 4s steps(18,end) 4s 1 normal both,
              animated-cursor 600ms steps(18,end) infinite;
 }
@@ -45,7 +45,7 @@ h1{
     font-family: 'Fredericka the Great', cursive;
 }
 
-p{
+h5{
     font-family: 'Delius', cursive;
     font-size: 13px;
 }
@@ -82,3 +82,25 @@ p{
   }
 
 
+  @media (min-width: 989px){
+    .js-logo{
+      margin-left: 70px;
+      
+    }
+    
+    .html-logo{
+      margin-right: 70px;
+
+    }
+  }
+  @media (min-width: 1200px){
+    .js-logo{
+      margin-left: 240px;
+    }
+    .html-logo{
+      margin-right: 240px;
+    }
+    .html-text{
+      left: 30;
+    }
+  }
