@@ -19,13 +19,13 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-// require("./routes/mod-api-routes")(app);
+require("./routes/mod-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: true };
 
 if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
+  syncOptions.force = false;
 }
 
 db.sequelize.sync(syncOptions).then(function() {

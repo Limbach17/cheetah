@@ -2,7 +2,8 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/moderators", function(req, res) {
-    db.Moderator.selectAll({
+    console.log("hi");
+    db.Moderator.findAll({
       include: [
         {model: db.Framework},
         {model: db.Subject},
@@ -45,7 +46,6 @@ module.exports = function(app) {
       res.json(dbModerator);
     });
   });
-
 
   app.delete("/api/moderators/:id", function(req, res) {
     db.Moderator.destroy({
