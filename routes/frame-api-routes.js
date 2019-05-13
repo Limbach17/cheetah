@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/frameworks", function(req, res) {
-    db.Framework.selectAll({
+    db.Framework.findAll({
         include: [
             {model: db.Subject},
             {model: db.Example},
