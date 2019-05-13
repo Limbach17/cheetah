@@ -4,7 +4,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   app.get("/", function(req, res) {
-    res.render("index");
+    res.render("index.html");
   });
 
   app.get("/frameworks/:route_name", function(req, res) {
