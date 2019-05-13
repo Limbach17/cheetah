@@ -82,7 +82,7 @@ h5{
   }
 
 
-  @media (min-width: 989px){
+  /* @media (min-width: 989px){
     .js-logo{
       margin-left: 70px;
       
@@ -92,7 +92,7 @@ h5{
       margin-right: 70px;
 
     }
-  }
+  } */
   @media (min-width: 1200px){
     .js-logo{
       margin-left: 240px;
@@ -101,6 +101,9 @@ h5{
       margin-right: 240px;
     }
     .html-text{
-      left: 30;
+      left: 115px;
+    }
+    .js-text{
+      left: 360px;
     }
   }
