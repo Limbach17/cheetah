@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
 app.get("/api/examples", function(req, res) {
-    db.Example.selectAll({
+    db.Example.findAll({
         // include: [
         //     {model: db.Example},
         //   ]
