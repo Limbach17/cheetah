@@ -7,6 +7,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
+  // app.get("/cruddy", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/cruddy.html"));
+  // });
+
   app.get("/frameworks/:route_name", function(req, res) {
     db.Framework.findAll({}).then(function(allFrameworks){
       var allFrameworks = allFrameworks;
@@ -17,17 +21,26 @@ module.exports = function(app) {
       ]
       })
       .then(function(dbFramework) {
+
+        console.log("\n---------");
+        console.log(dbFramework);
+        console.log("\n---------");
+        console.log(dbFramework.dataValues);
+        console.log("\n---------");
+        console.log(dbFramework.dataValues.Subjects);
       
-      console.log(allFrameworks);
-      // console.log("----1----");
-      // console.log(dbFramework);
-      console.log("----2----");
-      console.log(allFrameworks[2]);
       
       res.render("frameworks", {
         frameworks: allFrameworks,
-        framework_name: dbFramework.dataValues.framework_name,
-        subjects: dbFramework.dataValues.Subjects[0].subject_name
+        framework_name: allFrameworks[0].dataValues.route_name,
+        framework_route_name: allFrameworks[0].dataValues.framework_name,
+        selected: dbFramework.dataValues.framework_name,
+        // subjects: dbFramework.dataValues.Subjects[0].subject_name,
+        // subject_name:
+        // examples: 
+        // example_name:
+        
+
 
       })
       });
@@ -38,9 +51,9 @@ module.exports = function(app) {
   //   res.render("/account-mgmt");
   // });
 
-  // app.get("/cruddy", function(req, res) {
-  //   res.render("/cruddy");
-  // });
+  app.get("/cruddy", function(req, res) {
+    res.render("cruddy");
+  });
 
   app.get("*", function(req, res) {
     res.render("404");
