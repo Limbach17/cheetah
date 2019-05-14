@@ -8,6 +8,9 @@ body{
     
 }
 
+
+
+
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
  /* The typwriter cursor */
@@ -163,3 +166,8 @@ h5{
       left: 360px;
     }
   }
+
+ul {
+  max-height: 950px;
+  overflow: scroll;
+}
