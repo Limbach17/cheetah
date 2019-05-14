@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-lg-4">
+        <div class="card" style="width: 18rem; background-color:#B0C4DE;">
+            <div class="card-header">
+                    {{subject_name}}
+            </div>
+            <ul class="list-group list-group-flush">
+                {{#each examples}}
+                    {{>example-block}}
+                {{/each}}
+            </ul>
+            <div class="card-body">
+                <a href="{{documentation_url}}" class="card-link">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
