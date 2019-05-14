@@ -37,8 +37,8 @@ module.exports = function(app) {
       
       res.render("frameworks", {
         frameworks: allFrameworks,
-        // framework_name: ,
-        // framework_route_name: ,
+        framework_name: allFrameworks[0].dataValues.route_name,
+        framework_route_name: allFrameworks[0].dataValues.framework_name,
         selected: dbFramework.dataValues.framework_name,
         // subjects: dbFramework.dataValues.Subjects[0].subject_name
 
