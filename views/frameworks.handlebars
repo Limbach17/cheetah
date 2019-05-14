@@ -1,44 +1,5 @@
 
-<body class="htmlbody" >
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="/">
-            <img src="/assets/images/cheetah.gif" class="cheetah">
-          </a>
-        <!-- <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                {{#each Framework}}
-                {{/each}}
-                <li class="nav-item active">
-                    <a id class="nav-link" href="#">Admin Login <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">JavaScript <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">jQuery <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">CSS <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">HTML <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Node <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-    
+
     <div class="container" class="htmlhead">
         <h1 class="html">{{framework_name}}</h1>
     
@@ -46,7 +7,7 @@
         <div class="col-lg-4">
             <div class="card" style="width: 18rem; background-color:#B0C4DE;">
                 <div class="card-header">
-                    {{subject_name}}
+                    {{subjects}}
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"> < a > : Defines a hyperlink </li>
@@ -78,7 +39,7 @@
         <div class="col-lg-4">
             <div class="card" style="width: 18rem; background-color:#bbb;">
                 <div class="card-header">
-                    {{subject_name}}
+                    {{subjects}}
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"> < html > : Defines an html document</li>
@@ -178,4 +139,3 @@
     <script type="text/javascript" src="/js/frameworks.js">
         
     </script>
-</body>
