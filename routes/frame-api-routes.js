@@ -12,10 +12,10 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/frameworks/:id", function(req, res) {
+  app.get("/api/frameworks/:route_name", function(req, res) {
     db.Framework.findOne({
       where: {
-        id: req.params.id
+        route_name: req.params.route_name
       },
       include: [
         {model: db.Subject},

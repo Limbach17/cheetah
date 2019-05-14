@@ -8,14 +8,28 @@ module.exports = function(app) {
   });
 
   app.get("/frameworks/:route_name", function(req, res) {
-    db.Framework.findOne({ where: { route_name: req.params.route_name }}).then(function(dbFramework) {
-      // var hbsObject = {
-      //   Framework: data
-      // };
+    db.Framework.findAll({}).then(function(allFrameworks){
+      var allFrameworks = allFrameworks;
       
-      ///tried passing hbsObject below to no avail///
+      db.Framework.findOne({ where: { route_name: req.params.route_name }, include: [
+        {model: db.Subject},
+        {model: db.Example},
+      ]
+      })
+      .then(function(dbFramework) {
+      
+      console.log(allFrameworks);
+      // console.log("----1----");
+      // console.log(dbFramework);
+      console.log("----2----");
+      console.log(allFrameworks[2]);
+      
       res.render("frameworks", {
-        framework: dbFramework
+        frameworks: allFrameworks,
+        framework_name: dbFramework.dataValues.framework_name,
+        subjects: dbFramework.dataValues.Subjects[0].subject_name
+
+      })
       });
     });
   });
