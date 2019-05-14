@@ -4,9 +4,13 @@ body{
     background-color: lightgray;
 }
 .header-area{
-    padding: 40px;
+    padding-top: 30px;
+    padding-bottom: 20px;
     
 }
+
+
+
 
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -163,6 +167,7 @@ h5{
       left: 360px;
     }
   }
+<<<<<<< HEAD
 .admin {
   background-image: url('/assets/images/admin.jpg');
   background-size: 100%;
@@ -173,6 +178,28 @@ h5{
 
 
 .title {
+=======
+
+ul {
+  max-height: 950px;
+  overflow: scroll;
+}
+
+
+.back{
+  background-image: url('/public/assets/images/background.jpg');
+  background-attachment: fixed;
+}
+.moderatorBody {
+ 
+  padding-top: 20px;
+  width: 20px;
+  color: black;
+}
+
+.modTitle
+{
+>>>>>>> staging
   color: rgb(0, 89, 255);
   font-family: 'Open Sans', sans-serif; 
   text-align: center;
@@ -183,3 +210,7 @@ h5{
   font-family: 'Open Sans', sans-serif; 
   padding-top: 50px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> staging
