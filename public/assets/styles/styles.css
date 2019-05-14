@@ -173,10 +173,10 @@ ul {
   overflow: scroll;
 }
 
-
 .back{
-  background-image: url('/public/assets/images/background.jpg');
+  background-image: url('/assets/images/background.jpg');
   background-attachment: fixed;
+  background-size: 100%;
 }
 .moderatorBody {
  
