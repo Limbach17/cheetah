@@ -32,6 +32,7 @@
             <a id class="nav-link" href="#"><span class="sr-only">Admin Login</span></a>
             <ul class="navbar-nav mr-auto">
                {{#each Framework}}
+                  {{> Framework/navbar-block}}
                {{/each}}
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -41,6 +42,6 @@
         </div>
     </nav>
 
-  {{{main}}}
+ {{{body}}}
 
 </html>

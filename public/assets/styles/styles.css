@@ -9,6 +9,9 @@ body{
     
 }
 
+
+
+
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
  /* The typwriter cursor */
@@ -165,6 +168,11 @@ h5{
     }
   }
 
+ul {
+  max-height: 950px;
+  overflow: scroll;
+}
+
 
 .back{
   background-image: url('/public/assets/images/background.jpg');
@@ -189,3 +197,4 @@ h5{
   font-family: 'Open Sans', sans-serif; 
   padding-top: 50px;
 }
+
