@@ -12,9 +12,8 @@ module.exports = function(app) {
       // var hbsObject = {
       //   Framework: data
       // };
-
-      ///tried passing hbsObject below to no avail///
       
+      ///tried passing hbsObject below to no avail///
       res.render("frameworks", {
         framework: dbFramework
       });
