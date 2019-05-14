@@ -22,7 +22,7 @@ app.set("view engine", "handlebars");
 require("./routes/mod-api-routes")(app);
 require("./routes/frame-api-routes")(app);
 require("./routes/sub-api-routes")(app);
-// require("./routes/example-api-routes")(app);
+require("./routes/example-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
