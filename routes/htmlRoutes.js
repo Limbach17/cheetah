@@ -1,17 +1,25 @@
 var path = require("path");
+var db = require("../models");
 
 module.exports = function(app) {
 
   app.get("/", function(req, res) {
-    res.render("index");
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  ////MUST WORK ON PARAM TO SELECT FOR ONE SPECIFIC FRAMEWORK////
-  app.get("/frameworks", function(req, res) {
-    res.render("frameworks");
-  });
+  app.get("/frameworks/:route_name", function(req, res) {
+    db.Framework.findOne({ where: { route_name: req.params.route_name }}).then(function(dbFramework) {
+      // var hbsObject = {
+      //   Framework: data
+      // };
 
-  //////////////////////NEED HANDLEBARS BELOW THIS LINE/////////////////////////
+      ///tried passing hbsObject below to no avail///
+      
+      res.render("frameworks", {
+        framework: dbFramework
+      });
+    });
+  });
 
   // app.get("/mgmt", function(req, res) {
   //   res.render("/account-mgmt");
@@ -20,5 +28,9 @@ module.exports = function(app) {
   // app.get("/cruddy", function(req, res) {
   //   res.render("/cruddy");
   // });
+
+  app.get("*", function(req, res) {
+    res.render("404");
+  });
 
 };
