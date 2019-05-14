@@ -18,16 +18,29 @@ module.exports = function(app) {
       })
       .then(function(dbFramework) {
       
+      console.log("\n---------");
       console.log(allFrameworks);
-      // console.log("----1----");
-      // console.log(dbFramework);
-      console.log("----2----");
-      console.log(allFrameworks[2]);
+      console.log("\n---------");
+      console.log(allFrameworks[0]);
+      console.log("\n---------");
+      console.log(allFrameworks[0].dataValues);
+      console.log("\n---------");
+      console.log(allFrameworks[0].dataValues.route_name);
+      console.log("\n---------");
+      console.log(allFrameworks[0].dataValues.framework_name);
+      console.log("\n---------");
+      console.log(dbFramework);
+      console.log("\n---------");
+      console.log(dbFramework.dataValues.framework_name);
+      
+
       
       res.render("frameworks", {
         frameworks: allFrameworks,
-        framework_name: dbFramework.dataValues.framework_name,
-        subjects: dbFramework.dataValues.Subjects[0].subject_name
+        // framework_name: ,
+        // framework_route_name: ,
+        selected: dbFramework.dataValues.framework_name,
+        // subjects: dbFramework.dataValues.Subjects[0].subject_name
 
       })
       });
