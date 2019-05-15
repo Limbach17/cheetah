@@ -11,10 +11,10 @@ app.get("/api/examples", function(req, res) {
     });
   });
 
-  app.get("/api/:example", function(req, res) {
+  app.get("/api/examples/:route_name", function(req, res) {
     db.Example.findOne({
         where: {
-            id: req.params.id
+            route_name: req.params.route
         },
         // include: [
         //     {model: db.Example},
