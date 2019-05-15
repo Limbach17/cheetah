@@ -19,7 +19,7 @@ module.exports = function(app) {
       
       db.Framework.findOne({ where: { route_name: req.params.route_name }, include: [
         {model: db.Subject},
-        {model: db.Example}
+        // {model: db.Example}
       ]
       })
       .then(function(dbFramework) {
@@ -32,12 +32,7 @@ module.exports = function(app) {
         
         console.log("\n---------");
         console.log(selectionSubs);
-        console.log("\n---------");
-        console.log(selectionSubs[1]);
         
-        
-      
-      
       res.render("frameworks", {
         frameworks: allFrameworks,
         framework_name: name,
