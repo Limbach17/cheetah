@@ -6,23 +6,23 @@ module.exports = function(app) {
     db.Moderator.findAll({
       include: [
         {model: db.Framework},
-        {model: db.Subject},
-        {model: db.Example},
+        // {model: db.Subject},
+        // {model: db.Example}
       ]
     }).then(function(dbModerator) {
       res.json(dbModerator);
     });
   });
 
-  app.get("/api/moderators/:id", function(req, res) {
+  app.get("/api/moderators/:route_name", function(req, res) {
     db.Moderator.findOne({
       where: {
-        id: req.params.id
+        route_name: req.params.route_name
       },
       include: [
         {model: db.Framework},
-        {model: db.Subject},
-        {model: db.Example},
+        // {model: db.Subject},
+        // {model: db.Example}
       ]
     }).then(function(dbModerator) {
       res.json(dbModerator);

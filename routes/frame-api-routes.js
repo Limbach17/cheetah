@@ -5,7 +5,7 @@ module.exports = function(app) {
     db.Framework.findAll({
         include: [
             {model: db.Subject},
-            {model: db.Example},
+            {model: db.Example}
           ]
     }).then(function(dbFramework) {
       res.json(dbFramework);
@@ -19,7 +19,7 @@ module.exports = function(app) {
       },
       include: [
         {model: db.Subject},
-        {model: db.Example},
+        {model: db.Example}
       ]
     }).then(function(dbFramework) {
       res.json(dbFramework);
@@ -32,7 +32,7 @@ module.exports = function(app) {
     });
   });
 
-  app.put("/api/frameworks", function(req, res) {
+  app.put("/api/frameworks/:id", function(req, res) {
     db.Framework.update(
       req.body,
       {

@@ -11,10 +11,10 @@ app.get("/api/subjects", function(req, res) {
     });
   });
 
-  app.get("/api/:subject", function(req, res) {
+  app.get("/api/subjects/:route_name", function(req, res) {
     db.Subject.findOne({
         where: {
-            id: req.params.id
+            route_name: req.params.route_name
         },
         include: [
             {model: db.Example},
@@ -24,10 +24,10 @@ app.get("/api/subjects", function(req, res) {
     });
   });
 
-  app.get("/api/:framework/subjects", function(req, res) {
+  app.get("/api/frameworks/subjects", function(req, res) {
     db.Subject.selectAll({
         where: {
-            id: req.params.id
+            route_name: req.params.route_name
         },
         include: [
             {model: db.Example},
@@ -40,7 +40,7 @@ app.get("/api/subjects", function(req, res) {
   app.get("/api/:framework/:subject", function(req, res) {
     db.Subject.findOne({
         where: {
-            id: req.params.id
+            route_name: req.params.route_name
         },
         include: [
             {model: db.Example},
@@ -57,7 +57,7 @@ app.get("/api/subjects", function(req, res) {
     });
   });
 
-  app.put("/api/subjects", function(req, res) {
+  app.put("/api/subjects/:id", function(req, res) {
     db.Subject.update(
       req.body,
       {
