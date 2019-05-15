@@ -54,7 +54,7 @@ INSERT INTO cheetah.subjects (route_name, subject_name , documentation_url, crea
 VALUES ("jqevents", "jQuery Events", "https://www.w3schools.com/jquery/jquery_events.asp", now(), now(), 4, 1);
 
 INSERT INTO cheetah.subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("jqfunctions", "jQuery Syntax", "https://api.jquery.com/", now(), now(), 4, 1);
+VALUES ("jqfunctions", "jQuery Functions", "https://api.jquery.com/", now(), now(), 4, 1);
 
 /* ---------------------------------------------node.js-----------------------------------------------------------------------*/
 
