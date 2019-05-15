@@ -55,17 +55,17 @@ module.exports = function(sequelize, DataTypes) {
           }
         });
 
-        Example.belongsTo(models.Framework, {
-          foreignKey: {
-            allowNull: false
-          }
-        });
+        // Example.belongsTo(models.Framework, {
+        //   foreignKey: {
+        //     allowNull: false
+        //   }
+        // });
 
-        Example.belongsTo(models.Moderator, {
-          foreignKey: {
-            allowNull: false
-          }
-        });
+        // Example.belongsTo(models.Moderator, {
+        //   foreignKey: {
+        //     allowNull: false
+        //   }
+        // });
 
     };
     return Example;

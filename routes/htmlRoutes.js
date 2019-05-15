@@ -14,38 +14,40 @@ module.exports = function(app) {
   app.get("/frameworks/:route_name", function(req, res) {
     db.Framework.findAll({}).then(function(allFrameworks){
       var allFrameworks = allFrameworks;
+      var name = allFrameworks[0].dataValues.route_name;
+      var route_name = allFrameworks[0].dataValues.framework_name;
       
       db.Framework.findOne({ where: { route_name: req.params.route_name }, include: [
         {model: db.Subject},
-        {model: db.Example},
+        {model: db.Example}
       ]
       })
       .then(function(dbFramework) {
-
-        // console.log("\n---------");
-        // console.log(dbFramework);
-        // console.log("\n---------");
-        // console.log(dbFramework.dataValues);
-        // console.log("\n---------");
-        // console.log(dbFramework.dataValues.Subjects);
-        // console.log("\n---------");
-        // console.log(dbFramework.dataValues.Subjects);
-        // console.log("\n---------");
-        console.log(dbFramework.dataValues.Subjects);
+        var selection = dbFramework.dataValues.framework_name;
+        var selectionSubs = dbFramework.dataValues.Subjects;
+        var subNames = dbFramework.dataValues.Subjects[0].dataValues.subject_name;
+        var docURL = dbFramework.dataValues.Subjects[0].dataValues.documentation_url;
+        // var subExamples = dbFramework.dataValues.Subjects[0].dataValues.Examples;
+        // var listItem = dbFramework.dataValues.Subjects[0].dataValues.Examples[0].example_name;
+        
+        console.log("\n---------");
+        console.log(selectionSubs);
+        console.log("\n---------");
+        console.log(selectionSubs[1]);
+        
+        
       
       
       res.render("frameworks", {
         frameworks: allFrameworks,
-        framework_name: allFrameworks[0].dataValues.route_name,
-        framework_route_name: allFrameworks[0].dataValues.framework_name,
-        selected: dbFramework.dataValues.framework_name,
-        subjects: dbFramework.dataValues.Subjects,
-        subject_name: dbFramework.dataValues.Subjects[0].dataValues.subject_name,
-        documentation_url: dbFramework.dataValues.Subjects[0].dataValues.documentation_url
-        // examples: 
-        // example_name:
-        
-
+        framework_name: name,
+        framework_route_name: route_name,
+        selected: selection,
+        subjects: selectionSubs,
+        subject_name: subNames,
+        documentation_url: docURL,
+        // examples: subExamples,
+        // example_name: listItem
 
       })
       });
