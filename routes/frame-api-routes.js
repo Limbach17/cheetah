@@ -5,7 +5,7 @@ module.exports = function(app) {
     db.Framework.findAll({
         include: [
             {model: db.Subject},
-            {model: db.Example},
+            {model: db.Example}
           ]
     }).then(function(dbFramework) {
       res.json(dbFramework);
@@ -19,7 +19,7 @@ module.exports = function(app) {
       },
       include: [
         {model: db.Subject},
-        {model: db.Example},
+        {model: db.Example}
       ]
     }).then(function(dbFramework) {
       res.json(dbFramework);

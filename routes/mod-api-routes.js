@@ -7,7 +7,7 @@ module.exports = function(app) {
       include: [
         {model: db.Framework},
         {model: db.Subject},
-        {model: db.Example},
+        {model: db.Example}
       ]
     }).then(function(dbModerator) {
       res.json(dbModerator);
@@ -22,7 +22,7 @@ module.exports = function(app) {
       include: [
         {model: db.Framework},
         {model: db.Subject},
-        {model: db.Example},
+        {model: db.Example}
       ]
     }).then(function(dbModerator) {
       res.json(dbModerator);
