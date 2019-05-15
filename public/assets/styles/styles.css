@@ -141,10 +141,18 @@ ul {
   max-height: 950px;
   overflow: scroll;
 }
+<<<<<<< HEAD
 .back{
   background-image: url('/assets/images/background.jpg');
   background-attachment: fixed;
   background-size: 100%
+=======
+
+.back{
+  background-image: url('/assets/images/background.jpg');
+  background-attachment: fixed;
+  background-size: 100%;
+>>>>>>> master
 }
 .moderatorBody {
   padding-top: 20px;
