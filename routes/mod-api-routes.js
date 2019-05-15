@@ -6,8 +6,8 @@ module.exports = function(app) {
     db.Moderator.findAll({
       include: [
         {model: db.Framework},
-        {model: db.Subject},
-        {model: db.Example},
+        // {model: db.Subject},
+        // {model: db.Example}
       ]
     }).then(function(dbModerator) {
       res.json(dbModerator);
@@ -21,8 +21,8 @@ module.exports = function(app) {
       },
       include: [
         {model: db.Framework},
-        {model: db.Subject},
-        {model: db.Example},
+        // {model: db.Subject},
+        // {model: db.Example}
       ]
     }).then(function(dbModerator) {
       res.json(dbModerator);

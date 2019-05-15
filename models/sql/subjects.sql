@@ -10,7 +10,7 @@ INSERT INTO cheetah.subjects (route_name, subject_name , documentation_url, crea
 VALUES ("htmllist", "HTML List", "https://www.w3schools.com/html/html_lists.asp", now(), now(), 1, 3);
 
 INSERT INTO cheetah.subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("htmlmedia", "HTML Table", "https://www.w3schools.com/html/html_basic.asp", now(), now(), 1, 3);
+VALUES ("htmltable", "HTML Table", "https://www.w3schools.com/html/html_basic.asp", now(), now(), 1, 3);
 
 /* ---------------------------------------------CSS-----------------------------------------------------------------------*/
 
@@ -65,7 +65,7 @@ INSERT INTO cheetah.subjects (route_name, subject_name , documentation_url, crea
 VALUES ("npm", "Node.js Package Manager", "https://www.w3schools.com/nodejs/nodejs_npm.asp", now(), now(), 5, 1);
 
 INSERT INTO cheetah.subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("nodevents", "Node.js Basics", "https://www.w3schools.com/nodejs/nodejs_events.asp", now(), now(), 5, 1);
+VALUES ("nodevents", "Node.js Events", "https://www.w3schools.com/nodejs/nodejs_events.asp", now(), now(), 5, 1);
 
 INSERT INTO cheetah.subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
 VALUES ("nodefiles", "Node.js File System", "https://www.w3schools.com/nodejs/nodejs_filesystem.asp", now(), now(), 5, 1);
