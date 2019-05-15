@@ -58,9 +58,19 @@ module.exports = function(app) {
     });
   });
 
-  // app.get("/mgmt", function(req, res) {
-  //   res.render("/account-mgmt");
-  // });
+  app.get("/mgmt", function(req, res) {
+    db.Framework.findAll({}).then(function(allFrameworks){
+      var allFrameworks = allFrameworks;
+      var name = allFrameworks[0].dataValues.route_name;
+      var route_name = allFrameworks[0].dataValues.framework_name;
+
+      res.render("account-mgmt", {
+        frameworks: allFrameworks,
+        framework_name: name,
+        framework_route_name: route_name
+      });
+    });
+  });
 
   app.get("/cruddy", function(req, res) {
     db.Framework.findAll({}).then(function(allFrameworks){
