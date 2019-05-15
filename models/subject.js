@@ -42,11 +42,11 @@ module.exports = function(sequelize, DataTypes) {
           }
         });
         
-        Subject.belongsTo(models.Moderator,{
-          foreignKey: {
-            allowNull: false
-          }
-        });
+        // Subject.belongsTo(models.Moderator,{
+        //   foreignKey: {
+        //     allowNull: false
+        //   }
+        // });
 
         Subject.hasMany(models.Example, {
         }); 
