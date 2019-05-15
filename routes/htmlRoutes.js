@@ -22,11 +22,15 @@ module.exports = function(app) {
       })
       .then(function(dbFramework) {
 
-        console.log("\n---------");
-        console.log(dbFramework);
-        console.log("\n---------");
-        console.log(dbFramework.dataValues);
-        console.log("\n---------");
+        // console.log("\n---------");
+        // console.log(dbFramework);
+        // console.log("\n---------");
+        // console.log(dbFramework.dataValues);
+        // console.log("\n---------");
+        // console.log(dbFramework.dataValues.Subjects);
+        // console.log("\n---------");
+        // console.log(dbFramework.dataValues.Subjects);
+        // console.log("\n---------");
         console.log(dbFramework.dataValues.Subjects);
       
       
@@ -35,8 +39,9 @@ module.exports = function(app) {
         framework_name: allFrameworks[0].dataValues.route_name,
         framework_route_name: allFrameworks[0].dataValues.framework_name,
         selected: dbFramework.dataValues.framework_name,
-        // subjects: dbFramework.dataValues.Subjects[0].subject_name,
-        // subject_name:
+        subjects: dbFramework.dataValues.Subjects,
+        subject_name: dbFramework.dataValues.Subjects[0].dataValues.subject_name,
+        documentation_url: dbFramework.dataValues.Subjects[0].dataValues.documentation_url
         // examples: 
         // example_name:
         
