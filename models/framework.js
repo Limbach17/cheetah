@@ -60,8 +60,8 @@ module.exports = function(sequelize, DataTypes) {
         Framework.hasMany(models.Subject,{
         });
 
-        // Framework.hasMany(models.Example,{
-        // });
+        Framework.hasMany(models.Example,{
+        });
     };
     return Framework;
   };
