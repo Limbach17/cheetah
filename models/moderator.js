@@ -61,11 +61,11 @@ module.exports = function(sequelize, DataTypes) {
     Moderator.hasMany(models.Framework,{
     });
 
-    Moderator.hasMany(models.Subject,{
-    });
+    // Moderator.hasMany(models.Subject,{
+    // });
 
-    Moderator.hasMany(models.Example,{
-    });
+    // Moderator.hasMany(models.Example,{
+    // });
 
   }
   return Moderator;

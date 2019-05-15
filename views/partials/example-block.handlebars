@@ -1,3 +1,14 @@
 <li class="list-group-item">
-    <h6><strong>{{example_name}}</strong></h6>
+    {{!-- <button type="button" class="btn btn-outline-success modal-btn">
+        <strong>{{example_name}}</strong>
+    </button> --}}
+
+    <button type="submit" id="example-modal" class="btn btn-outline-success submit btn-lg btn-block" 
+    data-toggle="modal" data-target="#bestMatch-modal">
+        {{example_name}}
+    </button>
 </li>
+
+<script type="text/javascript" src="../../public/js/modal.js">
+
+</script>
