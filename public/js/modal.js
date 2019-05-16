@@ -1,4 +1,4 @@
-var db = require("../../models");
+// var db = require("../../models");
 
 $(document).ready(function() {
     $("#example-modal").on("click", function (event){
