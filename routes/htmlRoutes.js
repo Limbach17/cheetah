@@ -40,8 +40,6 @@ module.exports = function(app) {
         // console.log("\n---------");
         // console.log(dbFramework.dataValues.Examples[0].dataValues.example_name);
        
-       
-        
         res.render("frameworks", {
           frameworks: allFrameworks,
           framework_name: name,
