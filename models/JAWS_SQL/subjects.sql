@@ -1,38 +1,38 @@
 /* ---------------------------------------------HTML-----------------------------------------------------------------------*/
 
-INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("htmlbasic", "HTML Basics","https://www.w3schools.com/html/html_basic.asp", now(), now(), 1, 2);
+INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId) 
+VALUES ("htmlbasic", "HTML Basics","https://www.w3schools.com/html/html_basic.asp", now(), now(), 1);
 
-INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("htmlmedia", "HTML Media", "https://www.w3schools.com/html/", now(), now(), 1, 2);
+INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId) 
+VALUES ("htmlmedia", "HTML Media", "https://www.w3schools.com/html/", now(), now(), 1);
 
-INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("htmllist", "HTML List", "https://www.w3schools.com/html/html_lists.asp", now(), now(), 1, 2);
+INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId) 
+VALUES ("htmllist", "HTML List", "https://www.w3schools.com/html/html_lists.asp", now(), now(), 1);
 
-INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("htmltable", "HTML Table", "https://www.w3schools.com/html/html_basic.asp", now(), now(), 1, 2);
+INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId) 
+VALUES ("htmltable", "HTML Table", "https://www.w3schools.com/html/html_basic.asp", now(), now(), 1);
 
 /* ---------------------------------------------CSS-----------------------------------------------------------------------*/
 
-INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("cssbackground", "CSS Background", "https://www.w3schools.com/css/css_background.asp", now(), now(), 2, 2);
+INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId) 
+VALUES ("cssbackground", "CSS Background", "https://www.w3schools.com/css/css_background.asp", now(), now(), 2);
 
-INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId  
-VALUES ("cssborder", "CSS Background", "https://www.w3schools.com/css/css_border.asp", now(), now(), 2, 2);
+INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId)  
+VALUES ("cssborder", "CSS Background", "https://www.w3schools.com/css/css_border.asp", now(), now(), 2);
 
-INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("cssboxmodel", "CSS Box Model", "https://www.w3schools.com/css/css_boxmodel.asp", now(), now(), 2, 2);
+INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId) 
+VALUES ("cssboxmodel", "CSS Box Model", "https://www.w3schools.com/css/css_boxmodel.asp", now(), now(), 2);
 
-INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("cssmargin", "CSS Margin", "https://www.w3schools.com/css/css_background.asp", now(), now(), 2, 2);
+INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId) 
+VALUES ("cssmargin", "CSS Margin", "https://www.w3schools.com/css/css_background.asp", now(), now(), 2);
 
 /* ---------------------------------------------Javascript-----------------------------------------------------------------------*/
 
-INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("jsstatments", "Javascript Statements", "https://www.w3schools.com/js/js_statements.asp", now(), now(), 3, 2);
+INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId) 
+VALUES ("jsstatments", "Javascript Statements", "https://www.w3schools.com/js/js_statements.asp", now(), now(), 3);
 
-INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId, ModeratorId) 
-VALUES ("jsfunctions", "Functions", "https://www.w3schools.com/js/js_functions.asp", now(), now(), 3, 2);
+INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId) 
+VALUES ("jsfunctions", "Functions", "https://www.w3schools.com/js/js_functions.asp", now(), now(), 3);
 
 INSERT INTO j16qo0geru4y5ywb.Subjects (route_name, subject_name , documentation_url, createdAt, updatedAt, FrameworkId) 
 VALUES ("jsmethods", "Javascript Methods", "https://www.w3schools.com/js/js_object_methods.asp", now(), now(), 3);
