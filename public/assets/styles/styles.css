@@ -157,4 +157,15 @@ ul {
   font-family: 'Open Sans', sans-serif; 
   text-align: center;
   padding-top: 50px;
+
+}
+
+#login { 
+  font-family: 'Open Sans', sans-serif; 
+  padding-top: 50px;
+}
+
+.container {
+  width: 100% !important;
+
 }
