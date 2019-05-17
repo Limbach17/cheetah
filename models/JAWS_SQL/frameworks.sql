@@ -1,4 +1,6 @@
-INSERT INTO j16qo0geru4y5ywb.frameworks (route_name, framework_name, documentation_url, icon_url, createdAt, updatedAt, ModeratorId)
+
+
+SELECT * FROM j16qo0geru4y5ywb.frameworks;INSERT INTO j16qo0geru4y5ywb.frameworks (route_name, framework_name, documentation_url, icon_url, createdAt, updatedAt, ModeratorId)
 VALUES ('html', 'HTML5', 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5', '/assets/img/html.png', now(), now(), 2);
 
 INSERT INTO j16qo0geru4y5ywb.frameworks (route_name, framework_name, documentation_url, icon_url, createdAt, updatedAt, ModeratorId)
@@ -12,5 +14,3 @@ VALUES ('jquery', 'jQuery', 'https://api.jquery.com/', '/assets/img/jquery.jpg',
 
 INSERT INTO j16qo0geru4y5ywb.frameworks (route_name, framework_name, documentation_url, icon_url, createdAt, updatedAt, ModeratorId)
 VALUES ('node', 'Node.js', 'https://nodejs.org/en/docs/', '/assets/img/node.png/', now(), now(), 2);
-
-SELECT * FROM j16qo0geru4y5ywb.frameworks;

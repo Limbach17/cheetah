@@ -19,7 +19,7 @@ module.exports = function(app) {
       
       db.Framework.findOne({ where: { route_name: req.params.route_name }, include: [
         {model: db.Subject},
-        {model: db.Example}
+        // {model: db.Example}
       ]
       })
       .then(function(dbFramework) {
